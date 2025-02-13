@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Tic Tac Toe</h1>
+        <div id="cellContainer">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </div>
+        <h2 id="statusText"></h2>
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <div id="letterContainer">
+        <img id="closedLetter" src="letter.png" alt="Closed Letter">
+        <button id="openLetterButton">Open</button> <!-- Open Button -->
+        <img id="openLetter" src="open-letter.gif" alt="Open Letter" style="display: none;">
+        <div id="letterText" style="display: none;">
+            <h2>To My Dear Nagham</h2>
+            <p>
+                Even though you don’t quite believe in Valentine’s Day,  
+                this time you’ll have to stick with me. I coded this whole site just for you,  
+                as my first attempt at something like this.  
+                Just a little something to show you how much I love & appreciate you. 💖  
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript (Make Sure This is Linked Correctly) -->
+    <script src="index.js"></script>
+</body>
+</html>

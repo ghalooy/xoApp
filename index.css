@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #ffe4ec; /* Soft pink background */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #d63384;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🎀 Game Container Styling */
+    #gameContainer {
+        width: 380px;  /* Adjust size as needed */
+        height: 420px;
+        background-image: url('final.png'); /* Your pixel art */
+        background-size: cover; /* Ensures full coverage */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents tiling */
+        border-radius: 15px; /* Soft edges */
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3); /* Cute glow effect */
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers it */
+    }
+
+
+/*  Title Styling */
+h1 {
+  font-family: 'pixelify sans', sans-serif;
+    font-size: 30px;
+    color:rgb(250, 241, 249);
+    text-shadow: 2px 2px 5px rgba(232, 104, 202, 0.3);
+    margin-top: 0px; /* Move it closer to the top */
+    position: relative;
+    top: -10px; /* Moves it up */
+    }
+
+
+/* 💗 Game Board Grid */
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    gap: 5px;
+    font-family: 'pixelify sans', sans-serif;
+}
+
+/* 🩷 Game Cells */
+.cell {
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff007f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(255, 105, 180, 0.2);
+}
+
+/* ✨ Cell Hover Effect */
+.cell:hover {
+    background: #ffd6e8;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+}
+
+
+#statusText {
+    
+    font-size: 25px; /* Adjust if needed */
+    font-weight: bold;
+    min-height: 30px; /* Adjust based on text size */
+    font-family: 'pixelify sans';
+    color: #ff007f;
+    margin-top: 120px;
+    text-shadow: 1px 1px 4px rgba(255, 0, 127, 0.2);
+}
+
+
+#restartButton {
+    font-size: 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'pixelify sans', sans-serif;
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.3);
+}
+
+#restartButton:hover {
+    background: #ff007f;
+    transform: scale(1.1);
+}
+
+body {
+    height: 100vh; /* Ensures it covers the full page */
+    background: linear-gradient(to bottom, #ffe4ec, #ffccdd, #ffc1e3);
+    background-attachment: fixed; /* Keeps it in place */
+    margin: 0;
+    padding: 0;
+}
+.flower-icon {
+    width: 90px;  /* Adjust to fit your grid */
+    height: 90px;
+    image-rendering: pixelated; /* Keeps it crisp */
+    display: block;
+    margin: auto;
+}
+
+.win-glow {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.5); }
+}
+
+#letterContainer {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    width: 350px; /* Adjusted */
+    height: auto;
+    background: transparent;
+}
+#closedLetter {
+    width: 400px;  /* Make it bigger */
+    height: auto;
+    image-rendering: pixelated; /* Ensures crisp pixel art */
+    display: block;
+    margin-bottom: 30px; /* Creates space for the button */
+}
+
+#openLetter {
+    width: 400px; /* Slightly bigger */
+    height: auto;
+    display: block;
+    margin: auto;
+    image-rendering: pixelated;
+}
+
+#openLetterButton {
+   
+    background: #ec87ba;
+    margin-top: 30px; /* Push it lower */
+    font-size: 20px;  /* Slightly bigger */
+    padding: 15px 30px; /* Bigger button */
+    border-radius: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#openLetterButton:hover {
+    background: #f171b1;
+    transform: scale(1.1);
+}
+
+#letterText {
+    position: absolute;
+    top: 30%; /* Adjusts text inside the letter */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: black; /* Keep it readable */
+}
+#letterContainer {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px; /* Adjust to match the letter size */
+    height: 400px;
+    background: transparent; /* Make sure there's no extra background */
+}
+
+
+#gameContainer {
+    transition: opacity 1.5s ease-in-out; /* Smooth fade-out for the game */
+}
